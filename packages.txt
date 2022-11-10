@@ -5,12 +5,10 @@ networkmanager
 reflector
 man
 firefox
-
 gedit
 nano
 zsh
 alacritty
-
 i3-gaps
 picom
 polybar
@@ -20,11 +18,9 @@ feh
 flameshot
 unclutter
 consolas-font
-
 visual-studio-code-bin
 nodejs
 npm
-
 neofetch
 discord
 ani-cli
