@@ -12,10 +12,9 @@ alias ls="ls --color=auto"
 alias cls="clear"
 alias cs="(cls &) && ls"
 alias mdb="mongosh "mongodb+srv://cluster0.4zrjv3n.mongodb.net/myFirstDatabase" --apiVersion 1 --username kys123xd"
-alias hxh="ani-cli hunter x hunter"
 
 # config aliases
-EDITOR="code" # TODO if arg1 != "" then set EDITOR=arg1
+EDITOR="nano" # TODO if arg1 != "" then set EDITOR=arg1
 
 alias ci3='$EDITOR ~/.config/i3/config'
 alias cal='$EDITOR ~/.config/alacritty/alacritty.yml'
