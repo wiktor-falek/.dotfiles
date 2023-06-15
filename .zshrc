@@ -12,6 +12,7 @@ alias ls="ls --color=auto"
 alias cls="clear"
 alias cl="(cls &) && ls"
 
+# https://www.ackama.com/what-we-think/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained/
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # config aliases
