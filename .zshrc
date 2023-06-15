@@ -12,7 +12,7 @@ alias ls="ls --color=auto"
 alias cls="clear"
 alias cl="(cls &) && ls"
 
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # config aliases
 EDITOR="nano" # TODO if arg1 != "" then set EDITOR=arg1
