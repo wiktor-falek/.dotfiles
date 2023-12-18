@@ -15,14 +15,17 @@ alias cl="(cls &) && ls"
 # https://www.ackama.com/what-we-think/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained/
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-# config aliases
-EDITOR="nano" # TODO if arg1 != "" then set EDITOR=arg1
+EDITOR="vim"
 
+alias zshrc='$EDITOR ~/.zshrc'
 alias ci3='$EDITOR ~/.config/i3/config'
 alias cal='$EDITOR ~/.config/alacritty/alacritty.yml'
 alias cro='$EDITOR ~/.config/rofi/config.rasi'
 alias cpi='$EDITOR /etc/xdg/picom.conf'
+alias cpo='$EDITOR ~/.config/polybar/config.ini'
 alias b='brightnessctl s'
 alias btw='neofetch'
+alias en='setxkbmap -layout us'
+alias sv='setxkbmap -layout se'
 
 export PATH=~/.local/bin/:$PATH
