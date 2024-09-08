@@ -1,0 +1,14 @@
+[colors.primary]
+background = "#181818"
+foreground = "#ffffff"
+
+[font]
+size = 10.0
+
+[font.normal]
+family = "Terminus"
+style = "Bold"
+
+[shell]
+args = ["-c", "neofetch && exec zsh"]
+program = "/usr/bin/zsh"

@@ -19,9 +19,9 @@ EDITOR="vim"
 
 alias zshrc='$EDITOR ~/.zshrc'
 alias ci3='$EDITOR ~/.config/i3/config'
-alias cal='$EDITOR ~/.config/alacritty/alacritty.yml'
+alias cal='$EDITOR ~/.config/alacritty/alacritty.toml'
 alias cro='$EDITOR ~/.config/rofi/config.rasi'
-alias cpi='$EDITOR /etc/xdg/picom.conf'
+alias cpi='$EDITOR ~/.config/picom/picom.conf'
 alias cpo='$EDITOR ~/.config/polybar/config.ini'
 alias b='brightnessctl s'
 alias btw='neofetch'
