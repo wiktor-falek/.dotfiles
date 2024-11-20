@@ -19,10 +19,12 @@ EDITOR="code"
 
 alias zshrc='$EDITOR ~/.zshrc'
 alias ci3='$EDITOR ~/.config/i3/config'
-alias cal='$EDITOR ~/.config/alacritty/alacritty.toml'
+alias cala='$EDITOR ~/.config/alacritty/alacritty.toml'
 alias cro='$EDITOR ~/.config/rofi/config.rasi'
 alias cpi='$EDITOR ~/.config/picom/picom.conf'
 alias cpo='$EDITOR ~/.config/polybar/config.ini'
+alias cne='$EDITOR ~/.config/neofetch/config.conf'
+
 alias b='brightnessctl s'
 alias btw='neofetch'
 alias en='setxkbmap -layout us'

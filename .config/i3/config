@@ -1,12 +1,7 @@
-default_border normal 0
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+default_border none
 gaps outer -8
 gaps inner 8
-
-# for_window [class="^.*" layout="tabbed"] border pixel 0
-# client.focused          #181818B3 #181818B3 #ffffff   #181818B3
-# client.focused_inactive #181818B3 #181818B3 #aaaaaa #181818B3
-# client.unfocused        #181818B3 #181818B3 #aaaaaa #181818B3
-# client.urgent           #181818B3 #181818B3 #ffffff   #181818B3
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #181818B3 #181818B3 #ffffff #2e9ef4   #181818B3
@@ -14,10 +9,7 @@ client.focused_inactive #181818B3 #181818B3 #999999 #484e50   #181818B3
 client.unfocused        #181818B3 #181818B3 #999999 #292d2e   #181818B3
 client.urgent           #181818B3 #181818B3 #ffffff #900000   #181818B3
 client.placeholder      #181818B3 #181818B3 #ffffff #000000   #181818B3
-
 client.background       #181818B3
-
-# Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
 
