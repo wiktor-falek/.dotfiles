@@ -1,14 +1,21 @@
-# for_window [class="^.*"] border pixel 0
 default_border normal 0
 gaps outer -8
 gaps inner 8
 
-# class                 border    bg text   indicator child_border
-client.focused          #181818B3 #181818B3 #ffffff   
-client.focused_inactive #181818B3 #181818B3 #aaaaaa   #01f01f
-client.unfocused        #181818B3 #181818B3 #aaaaaa   #292d2e
-client.urgent           #181818B3 #181818B3 #ffffff   #900000
+# for_window [class="^.*" layout="tabbed"] border pixel 0
+# client.focused          #181818B3 #181818B3 #ffffff   #181818B3
+# client.focused_inactive #181818B3 #181818B3 #aaaaaa #181818B3
+# client.unfocused        #181818B3 #181818B3 #aaaaaa #181818B3
+# client.urgent           #181818B3 #181818B3 #ffffff   #181818B3
 
+# class                 border  backgr. text    indicator child_border
+client.focused          #181818B3 #181818B3 #ffffff #2e9ef4   #181818B3
+client.focused_inactive #181818B3 #181818B3 #999999 #484e50   #181818B3
+client.unfocused        #181818B3 #181818B3 #999999 #292d2e   #181818B3
+client.urgent           #181818B3 #181818B3 #ffffff #900000   #181818B3
+client.placeholder      #181818B3 #181818B3 #ffffff #000000   #181818B3
+
+client.background       #181818B3
 
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
@@ -60,6 +67,8 @@ bindsym XF86MonBrightnessDown exec --no-startup-id ~/.config/scripts/lower_brigh
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +20 && $refresh_i3status
 
 bindsym Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
+
+bindsym $mod+Shift+l exec --no-startup-id ~/.config/scripts/toggle_keyboard_layout.sh
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

@@ -1,6 +1,46 @@
+# Default colors
 [colors.primary]
-background = "#181818"
-foreground = "#ffffff"
+background = '#181818'
+foreground = '#FFFFFF'
+
+# Normal colors
+[colors.normal]
+black   = '#444444'
+red     = '#F07178'
+green   = '#91B362'
+yellow  = '#F9AF4F'
+blue    = '#5FAFD7'
+magenta = '#01f01f'
+cyan    = '#5FAFD7'
+white   = '#DDDDDD'
+
+# Bright colors
+[colors.bright]
+black   = '#686868'
+red     = '#FFAFD7'
+green   = '#C2D94C'
+yellow  = '#FFB454'
+blue    = '#59C2FF'
+magenta = '#FFEE99'
+cyan    = '#95E6CB'
+white   = '#FFFFFF'
+
+# [colors]
+#   # Default colors
+#   [colors.primary]
+#   background = "#181818"  # Dark background
+#   foreground = "#ffffff"  # Light foreground
+
+#   # Normal colors (black, red, green, etc.)
+#   [colors.normal]
+#   black   = "#777777"
+#   red     = "#F25D5D"
+#   green   = "#60F25D"
+#   yellow  = "#F2F25D"
+#   blue    = "#5D60F2"
+#   magenta = "#F25DF2"
+#   cyan    = "#5fafd7"
+#   white   = "#D1D1D1"
 
 [window]
 opacity = 0.7
