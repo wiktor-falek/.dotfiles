@@ -1,15 +1,21 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
-default_border none
-gaps outer -8
-gaps inner 8
+default_border pixel 2
+hide_edge_borders both
 
-# class                 border  backgr. text    indicator child_border
-client.focused          #181818B3 #181818B3 #ffffff #2e9ef4   #181818B3
-client.focused_inactive #181818B3 #181818B3 #999999 #484e50   #181818B3
-client.unfocused        #181818B3 #181818B3 #999999 #292d2e   #181818B3
-client.urgent           #181818B3 #181818B3 #ffffff #900000   #181818B3
-client.placeholder      #181818B3 #181818B3 #ffffff #000000   #181818B3
+gaps inner 6
+gaps outer -6
+smart_gaps on
+
+gaps top 0
+
+# class                 border    bgtext    text    indicator child_border
+client.focused          #181818B3 #F07178B3 #ffffff #5FAFD7 #F07178
+client.focused_inactive #181818B3 #181818B3 #999999 #181818 #5FAFD7
+client.unfocused        #181818B3 #181818B3 #999999 #181818 #5FAFD7
+client.urgent           #181818B3 #181818B3 #ffffff #181818 #5FAFD7
+client.placeholder      #181818B3 #181818B3 #ffffff #181818 #5FAFD7
 client.background       #181818B3
+
 
 set $mod Mod4
 
@@ -40,7 +46,7 @@ exec --no-startup-id picom
 
 exec --no-startup-id polybar -r mybar
 
-exec_always --no-startup-id nitrogen --set-zoom-fill --save ~/Wallpapers/sky.jpg
+exec_always --no-startup-id nitrogen --set-zoom-fill --save ~/Wallpapers/wallhaven.png
 
 exec --no-startup-id unclutter --timeout 1
 
