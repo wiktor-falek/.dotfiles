@@ -2,11 +2,12 @@
 default_border pixel 2
 hide_edge_borders both
 
+smart_gaps on
 gaps inner 6
 gaps outer -6
-smart_gaps on
-
 gaps top 0
+
+for_window [class="Firefox"] border normal
 
 # class                 border    bgtext    text    indicator child_border
 client.focused          #181818B3 #F07178B3 #ffffff #5FAFD7 #F07178
