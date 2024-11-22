@@ -58,5 +58,5 @@ style = "Bold"
 [terminal]
 
 [terminal.shell]
-args = ["-c", "neofetch && exec zsh"]
+args = ["-c", "echo '' && neofetch && exec zsh"]
 program = "/usr/bin/zsh"

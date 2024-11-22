@@ -3,20 +3,22 @@ default_border pixel 2
 hide_edge_borders both
 
 smart_gaps on
-gaps inner 6
-gaps outer -6
+gaps inner 2
+gaps outer -2
 gaps top 0
 
 for_window [class="Firefox"] border normal
 
-# class                 border    bgtext    text    indicator child_border
-client.focused          #181818B3 #F07178B3 #ffffff #5FAFD7 #F07178
-client.focused_inactive #181818B3 #181818B3 #999999 #181818 #5FAFD7
-client.unfocused        #181818B3 #181818B3 #999999 #181818 #5FAFD7
-client.urgent           #181818B3 #181818B3 #ffffff #181818 #5FAFD7
-client.placeholder      #181818B3 #181818B3 #ffffff #181818 #5FAFD7
-client.background       #181818B3
+# for_window [all] title_window_icon padding 4px
 
+# class                 border    textbg    text    indicator child_border
+client.focused          #F07178D9 #F07178D9 #FFFFFF  #5FAFD7BF #F07178
+client.focused          #F07178D9 #F07178D9 #FFFFFF  #5FAFD7BF #F07178
+client.focused_inactive #FFFFFFCC #FFFFFFCC #000000  #181818BF #FFFFFFCC
+client.unfocused        #FFFFFFCC #FFFFFFCC #000000  #181818BF #FFFFFFCC
+client.urgent           #FFFFFFCC #FFFFFFCC #000000  #181818BF #FFFFFFCC
+client.placeholder      #FFFFFFCC #FFFFFFCC #000000  #181818BF #FFFFFFCC
+client.background       #FFFFFF
 
 set $mod Mod4
 
@@ -31,6 +33,7 @@ font pango:Terminus Normal 14
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id i3-msg "workspace 3"
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -41,19 +44,30 @@ exec --no-startup-id dex --autostart --environment i3
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
+exec_always --no-startup-id nitrogen --set-zoom-fill --save ~/Wallpapers/wallhaven.png
+exec_always --no-startup-id xset r rate 200 60
+
 exec --no-startup-id nm-applet
 
 exec --no-startup-id picom
 
 exec --no-startup-id polybar -r mybar
 
-exec_always --no-startup-id nitrogen --set-zoom-fill --save ~/Wallpapers/wallhaven.png
-
 exec --no-startup-id unclutter --timeout 1
 
-exec --no-startup-id xset r 232
-exec --no-startup-id xset r 233
-exec_always --no-startup-id xset r rate 200 60
+assign [class="firefox"] 1
+exec --no-startup-id firefox
+
+assign [class="code"] 2
+exec --no-startup-id code
+
+assign [class="alacritty"] 3
+exec --no-startup-id alacritty
+
+assign [class="discord"] 4
+exec --no-startup-id (discord &) && discord 
+
+exec --no-startup-id mullvad-vpn --no-gui
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status

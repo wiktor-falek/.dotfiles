@@ -26,7 +26,7 @@ alias cpo='$EDITOR ~/.config/polybar/config.ini'
 alias cne='$EDITOR ~/.config/neofetch/config.conf'
 
 alias b='brightnessctl s'
-alias btw='neofetch'
+alias btw='echo '' && neofetch'
 alias en='setxkbmap -layout us'
 alias sv='setxkbmap -layout se'
 
