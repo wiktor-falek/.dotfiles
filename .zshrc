@@ -25,7 +25,7 @@ alias cpi='$EDITOR ~/.config/picom/picom.conf'
 alias cpo='$EDITOR ~/.config/polybar/config.ini'
 alias cne='$EDITOR ~/.config/neofetch/config.conf'
 
-alias b='brightnessctl s'
+alias b='~/.config/scripts/change_brightness.sh'
 alias btw='echo '' && neofetch'
 alias en='setxkbmap -layout us'
 alias sv='setxkbmap -layout se'

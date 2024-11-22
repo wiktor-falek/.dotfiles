@@ -33,7 +33,6 @@ font pango:Terminus Normal 14
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id i3-msg "workspace 3"
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -44,10 +43,11 @@ exec --no-startup-id i3-msg "workspace 3"
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
+exec --no-startup-id nm-applet
+
+exec --no-startup-id ~/.config/scripts/restore_brightness.sh
 exec_always --no-startup-id nitrogen --set-zoom-fill --save ~/Wallpapers/wallhaven.png
 exec_always --no-startup-id xset r rate 200 60
-
-exec --no-startup-id nm-applet
 
 exec --no-startup-id picom
 
@@ -61,13 +61,17 @@ exec --no-startup-id firefox
 assign [class="code"] 2
 exec --no-startup-id code
 
-assign [class="alacritty"] 3
-exec --no-startup-id alacritty
-
 assign [class="discord"] 4
 exec --no-startup-id (discord &) && discord 
 
+assign [class="Mullvad VPN"] 9
 exec --no-startup-id mullvad-vpn --no-gui
+
+exec --no-startup-id i3-msg "workspace 3"
+# assign [class="alacritty"] 3
+exec --no-startup-id alacritty
+
+# TODO: close mullvad
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -76,8 +80,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-bindsym XF86MonBrightnessDown exec --no-startup-id ~/.config/scripts/lower_brightness.sh && $refresh_i3status
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +20 && $refresh_i3status
+bindsym XF86MonBrightnessDown exec --no-startup-id ~/.config/scripts/change_brightness.sh down && $refresh_i3status
+bindsym XF86MonBrightnessUp exec --no-startup-id ~/.config/scripts/change_brightness.sh up && $refresh_i3status
 
 bindsym Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
 
