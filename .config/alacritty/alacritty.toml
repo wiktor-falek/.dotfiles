@@ -44,6 +44,7 @@ white   = '#FFFFFF'
 
 [window]
 # opacity = 0.7
+dimensions = { columns = 90, lines = 35 }
 
 [env]
 WINIT_X11_SCALE_FACTOR = "1.2"
