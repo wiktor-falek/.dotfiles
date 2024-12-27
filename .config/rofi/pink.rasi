@@ -1,0 +1,103 @@
+* {
+    bg1:    rgb(235, 189, 189);
+    bg2:    #e3e3e3;
+    fg0:    #E6E6E6;
+    fg1:    #FFFFFF;
+    fg2:    #969696;
+    fg3:    #3D3D3D;
+}
+
+* {
+    font:   "Terminus Bold 14";
+    background-color:   transparent;
+    text-color:         #111111;
+}
+
+window {
+    width:  500px;
+    height: 370px;
+    background-color: @bg1;
+}
+
+mainbox {
+  children: 					[ mode-switcher,message,listview,entry ];
+  padding:    12px;
+  orientation:				vertical;
+    border:  					4px;
+	border-color: #F17378;
+}
+
+button { 
+	padding: 9px 0; 
+}
+
+#button.selected {
+    background-color: 			@bg2;
+    text-color:       			@text-color;
+}
+
+inputbar {
+    background-color:   @bg1;
+    border-color:       @bg1;
+
+    border:         2px;
+
+    padding:    8px 16px;
+    spacing:    8px;
+    children:   [ prompt, entry ];
+}
+
+entry {
+  expand: false;
+  placeholder: "Search";
+  placeholder-color: #888;
+  margin: 0 0 0 15;
+}
+
+message {
+    margin:             12px 0 0;
+    border-radius:      16px;
+    border-color:       @bg1;
+    background-color:   @bg1;
+}
+
+textbox {
+    padding:    8px 24px;
+}
+
+listview {
+    background-color:   transparent;
+
+    margin:     12px 0 0;
+    lines:      8;
+    columns:    1;
+
+    fixed-height: false;
+}
+
+element {
+    padding:        8px;
+    spacing:        8px;
+    children: [element-icon, element-text ];
+}
+
+element normal active {
+    text-color: @bg1;
+}
+
+element alternate active {
+    text-color: @bg1;
+}
+
+element selected normal, element selected active {
+    background-color:   @bg2;
+}
+
+element-icon {
+    size:           1em;
+    vertical-align: 0.5;
+}
+
+element-text {
+    text-color: inherit;
+}
