@@ -36,22 +36,11 @@ button {
     text-color:       			@text-color;
 }
 
-inputbar {
-    background-color:   @bg1;
-    border-color:       @bg1;
-
-    border:         2px;
-
-    padding:    8px 16px;
-    spacing:    8px;
-    children:   [ prompt, entry ];
-}
-
 entry {
   expand: false;
   placeholder: "Search";
   placeholder-color: #888;
-  margin: 0 0 0 15;
+  margin: 0 0 0 35;
 }
 
 message {
