@@ -2,9 +2,10 @@
 
 value=$1
 
+max=$(brightnessctl i | grep -oP 'Max brightness: \K\d+')
 current=$(brightnessctl i | grep -oP 'Current brightness: \K\d+')
-increment=20
 
+increment=$((20 + $current / 10))
 
 if [ "$value" == "up" ]; then
     brightnessctl set $(($current + $increment))
