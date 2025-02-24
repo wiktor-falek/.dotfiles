@@ -1,0 +1,12 @@
+2025/02/23-07:39:05.947 d59 Reusing MANIFEST /home/apdo/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/MANIFEST-000001
+2025/02/23-07:39:05.948 d59 Recovering log #52
+2025/02/23-07:39:05.985 d59 Reusing old log /home/apdo/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/000052.log 
+2025/02/23-15:26:21.261 d59 Level-0 table #57: started
+2025/02/23-15:26:21.295 d59 Level-0 table #57: 1467391 bytes OK
+2025/02/23-15:26:21.298 d59 Delete type=0 #52
+2025/02/23-15:28:36.173 d59 Compacting 1@1 + 1@2 files
+2025/02/23-15:28:36.199 d59 Generated table #58@1: 1445 keys, 404003 bytes
+2025/02/23-15:28:36.199 d59 Compacted 1@1 + 1@2 files => 404003 bytes
+2025/02/23-15:28:36.202 d59 compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/02/23-15:28:36.202 d59 Delete type=2 #54
+2025/02/23-15:28:36.202 d59 Delete type=2 #57
